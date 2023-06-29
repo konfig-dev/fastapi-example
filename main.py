@@ -42,7 +42,7 @@ def create_user(user: UserCreate):
 
 
 @app.put("/users/{user_id}")
-def update_user(user_id: UUID, user: User):
+def update_user(user_id: UUID, user: UserCreate):
     for i, db_user in enumerate(db):
         if db_user['id'] == user_id:
             user_data = user.dict()

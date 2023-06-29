@@ -117,7 +117,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserCreate"
               }
             }
           },
@@ -194,30 +194,6 @@
             "items": {
               "$ref": "#/components/schemas/ValidationError"
             }
-          }
-        }
-      },
-      "User": {
-        "title": "User",
-        "required": [
-          "name",
-          "email",
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "title": "Name",
-            "type": "string"
-          },
-          "email": {
-            "title": "Email",
-            "type": "string"
-          },
-          "id": {
-            "title": "Id",
-            "type": "string",
-            "format": "uuid"
           }
         }
       },
