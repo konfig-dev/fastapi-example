@@ -24,7 +24,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       },
       "post": {
         "summary": "Create User",
@@ -58,7 +63,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     },
     "/users/{user_id}": {
@@ -96,7 +106,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       },
       "put": {
         "summary": "Update User",
@@ -142,7 +157,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       },
       "delete": {
         "summary": "Delete User",
@@ -178,7 +198,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     }
   },
@@ -248,6 +273,20 @@
           }
         }
       }
+    },
+    "securitySchemes": {
+      "X-API-Key": {
+        "X-API-Key": {
+          "type": "apiKey",
+          "name": "X-API-Key",
+          "in": "header"
+        }
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "X-API-Key": []
+    }
+  ]
 }
