@@ -70,7 +70,7 @@ def custom_openapi():
     )
 
     # Add security requirement to the OpenAPI schema
-    security_scheme = {
+    security_schemes = {
         "X-API-Key": {
             "type": "apiKey",
             "name": "X-API-Key",
@@ -80,7 +80,7 @@ def custom_openapi():
     security_requirements = [{"X-API-Key": []}]
     if "components" not in openapi_schema:
         openapi_schema["components"] = {}
-    openapi_schema["components"]["securitySchemes"] = {"X-API-Key": security_scheme}
+    openapi_schema["components"]["securitySchemes"] = security_schemes
     openapi_schema["security"] = security_requirements
 
     file_path = os.path.join(os.getcwd(), "openapi.json")

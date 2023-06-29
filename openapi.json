@@ -276,11 +276,9 @@
     },
     "securitySchemes": {
       "X-API-Key": {
-        "X-API-Key": {
-          "type": "apiKey",
-          "name": "X-API-Key",
-          "in": "header"
-        }
+        "type": "apiKey",
+        "name": "X-API-Key",
+        "in": "header"
       }
     }
   },
