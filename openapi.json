@@ -33,7 +33,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserCreate"
               }
             }
           },
@@ -70,7 +70,8 @@
             "required": true,
             "schema": {
               "title": "User Id",
-              "type": "integer"
+              "type": "string",
+              "format": "uuid"
             },
             "name": "user_id",
             "in": "path"
@@ -105,7 +106,8 @@
             "required": true,
             "schema": {
               "title": "User Id",
-              "type": "integer"
+              "type": "string",
+              "format": "uuid"
             },
             "name": "user_id",
             "in": "path"
@@ -150,7 +152,8 @@
             "required": true,
             "schema": {
               "title": "User Id",
-              "type": "integer"
+              "type": "string",
+              "format": "uuid"
             },
             "name": "user_id",
             "in": "path"
@@ -197,16 +200,35 @@
       "User": {
         "title": "User",
         "required": [
-          "id",
+          "name",
+          "email",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "email": {
+            "title": "Email",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "UserCreate": {
+        "title": "UserCreate",
+        "required": [
           "name",
           "email"
         ],
         "type": "object",
         "properties": {
-          "id": {
-            "title": "Id",
-            "type": "integer"
-          },
           "name": {
             "title": "Name",
             "type": "string"
