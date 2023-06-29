@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastapi-example"
+version = "0.1.0"
+description = "Example API managing a User database"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "fastapi_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = "^0.98.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
