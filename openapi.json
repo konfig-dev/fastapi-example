@@ -226,7 +226,8 @@
         "title": "UserCreate",
         "required": [
           "name",
-          "email"
+          "email",
+          "country"
         ],
         "type": "object",
         "properties": {
@@ -236,6 +237,10 @@
           },
           "email": {
             "title": "Email",
+            "type": "string"
+          },
+          "country": {
+            "title": "Country",
             "type": "string"
           }
         }

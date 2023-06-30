@@ -17,6 +17,7 @@ api_key_header = APIKeyHeader(name="X-API-Key", auto_error=True)
 class UserCreate(BaseModel):
     name: str
     email: str
+    country: str
 
 class User(UserCreate):
     id: UUID
